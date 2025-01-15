@@ -53,7 +53,7 @@ export default function Header() {
                 <div className="flex justify-between items-center">
 
                     <div>
-                        <img className="w-32" src="drinks-menu/logo.svg" alt="Logotipo" />
+                        <img className="w-32" src="/drinks-menu/logo.svg" alt="Logotipo" />
                     </div>
 
                     <nav className="flex gap-4">
