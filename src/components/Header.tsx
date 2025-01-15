@@ -13,6 +13,7 @@ export default function Header() {
     const { pathname } = useLocation()
     const isHome = useMemo(() => pathname === '/', [pathname])
 
+    //Obtienen la información de funciones hechas en Zustand (Slice)
     const fetchCategories = useAppStore((state) => state.fetchCategories)
     const categories = useAppStore((state) => state.categories)
     const searchRecipes = useAppStore((state) => state.searchRecipes)
@@ -32,7 +33,7 @@ export default function Header() {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-
+        //Validar
         if (Object.values(searchFilters).includes('')) {
             showNotification({
                 text: 'Todos los campos son obligatorios',
@@ -52,7 +53,7 @@ export default function Header() {
                 <div className="flex justify-between items-center">
 
                     <div>
-                        <img className="w-32" src="/logo.svg" alt="Logotipo" />
+                        <img className="w-32" src="drinks-menu/logo.svg" alt="Logotipo" />
                     </div>
 
                     <nav className="flex gap-4">
@@ -61,10 +62,12 @@ export default function Header() {
                             className={({ isActive }) =>
                                 isActive ? 'text-orange-500 uppercase font-bold' : "text-white uppercase font-bold"}
                         >Inicio</NavLink>
+
                         <NavLink
+                            to='/favoritos'
                             className={({ isActive }) =>
                                 isActive ? 'text-orange-500 uppercase font-bold' : "text-white uppercase font-bold"}
-                            to='/favoritos'>Favoritos</NavLink>
+                        >Favoritos</NavLink>
                     </nav>
                 </div>
 

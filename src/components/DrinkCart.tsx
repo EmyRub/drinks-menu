@@ -13,7 +13,7 @@ export default function DrinkCart({ drink }: DrinkCardProps) {
             <div className="overflow-hidden">
                 <img
                     src={drink.strDrinkThumb}
-                    alt={drink.strDrink}
+                    alt={`Imagen de ${drink.strDrink}`}
                     className="hover:scale-125 transition-transform hover:rotate-2"
                 />
             </div>

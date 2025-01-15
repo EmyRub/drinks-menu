@@ -13,7 +13,7 @@ export default function Layout() {
     useEffect(() => {
         loadFromStorage()
     }, [])
-    
+
     return (
         <>
             <Header />
@@ -22,7 +22,7 @@ export default function Layout() {
             </main>
 
             <Modal />
-            <Notification/>
+            <Notification />
         </>
     )
 }

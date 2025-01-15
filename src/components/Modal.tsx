@@ -5,6 +5,7 @@ import { Recipe } from '../types';
 
 export default function Modal() {
 
+    //Extracto de las funciones del slice
     const modal = useAppStore((state) => state.modal)
     const closeModal = useAppStore((state) => state.closeModal)
     const selectedRecipe = useAppStore((state) => state.selectedRecipe)
@@ -71,11 +72,15 @@ export default function Modal() {
                                     <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
                                         Ingredientes y Cantidades
                                     </Dialog.Title>
+
                                     {renderIngredients()}
+
                                     <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
                                         Instrucciones
                                     </Dialog.Title>
+
                                     <p className="text-lg">{selectedRecipe.strInstructions}</p>
+                                    
                                     <div className='mt-5 flex justify-between gap-4'>
                                         <button
                                             type='button'
