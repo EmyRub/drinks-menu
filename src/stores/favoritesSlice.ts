@@ -21,10 +21,12 @@ export const createFavoritesSlice: StateCreator<FavoritesSliceType & RecipesSlic
             set((state) => ({
                 favorites: state.favorites.filter(favorite => favorite.idDrink !== recipe.idDrink)
             }))
+
             createNotificationSlice(set, get, api).showNotification({
                 text: 'Se eliminó de favoritos',
                 error: false
             })
+
         } else {
             //Puede ser get.favorites
             set((state) => ({
@@ -40,9 +42,11 @@ export const createFavoritesSlice: StateCreator<FavoritesSliceType & RecipesSlic
         
         localStorage.setItem('favorites', JSON.stringify(get().favorites))
     },
+
     favoriteExists: (id) => {
         return get().favorites.some(favorite => favorite.idDrink === id)
     },
+    
     loadFromStorage: () => {
         const storedFavorites = localStorage.getItem('favorites')
         if (storedFavorites) {
