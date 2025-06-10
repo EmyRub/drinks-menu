@@ -4,6 +4,7 @@ import { openRouter } from "../lib/ai"
 export default {
 
     async generateRecipe(prompt: string) {
+        
         const result = streamText({
             model: openRouter('meta-llama/llama-3.3-8b-instruct:free'),
             prompt,
