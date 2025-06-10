@@ -8,7 +8,7 @@ export default {
             model: openRouter('meta-llama/llama-3.3-8b-instruct:free'),
             prompt,
             system: 'Eres un adulto joven con experiencia en bartender',
-            temperature: 0.5
+            temperature: 0
         })
 
         return result.textStream
