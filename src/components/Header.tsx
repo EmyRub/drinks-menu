@@ -1,6 +1,6 @@
-import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
 import { useAppStore } from "../stores/useAppStore";
+import { NavLink, useLocation } from "react-router-dom";
+import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 
 export default function Header() {
 
@@ -47,6 +47,7 @@ export default function Header() {
     }
 
     return (
+
         <header className={isHome ? 'bg-header bg-center bg-cover' : "bg-slate-800"}>
             <div className="mx-auto max-w-[90%] px-5 py-16">
 
@@ -61,19 +62,22 @@ export default function Header() {
                             to='/'
                             className={({ isActive }) =>
                                 isActive ? 'text-orange-500 uppercase font-bold' : "text-white uppercase font-bold"}
-                        >Inicio</NavLink>
+                        >Inicio
+                        </NavLink>
 
                         <NavLink
                             to='/favoritos'
                             className={({ isActive }) =>
                                 isActive ? 'text-orange-500 uppercase font-bold' : "text-white uppercase font-bold"}
-                        >Favoritos</NavLink>
+                        >Favoritos
+                        </NavLink>
 
                         <NavLink
                             to='/generate'
                             className={({ isActive }) =>
                                 isActive ? 'text-orange-500 uppercase font-bold' : "text-white uppercase font-bold"}
-                        >Generar con AI</NavLink>
+                        >Generar con AI
+                        </NavLink>
                     </nav>
                 </div>
 
@@ -84,6 +88,7 @@ export default function Header() {
                     >
 
                         <div className="space-y-4 ">
+
                             <label
                                 htmlFor="ingredient"
                                 className="block text-white uppercase font-extrabold text-lg"
@@ -93,10 +98,10 @@ export default function Header() {
                                 id="ingredient"
                                 type="text"
                                 name="ingredient"
-                                className="p-3 w-full rounded-lg focus:outline-none"
-                                placeholder="Nombre o Ingrediente. Ej. Vodka, Tequila, Café"
                                 onChange={handleChange}
                                 value={searchFilters.ingredient}
+                                className="bg-white p-3 w-full rounded-lg focus:outline-none"
+                                placeholder="Nombre o Ingrediente. Ej. Vodka, Tequila, Café"
                             />
                         </div>
 
@@ -109,7 +114,7 @@ export default function Header() {
                             <select
                                 id="category"
                                 name="category"
-                                className="p-3 w-full rounded-lg focus:outline-none"
+                                className="bg-white p-3 w-full rounded-lg focus:outline-none"
                                 onChange={handleChange}
                                 value={searchFilters.category}
                             >

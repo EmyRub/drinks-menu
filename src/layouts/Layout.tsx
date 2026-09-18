@@ -1,9 +1,9 @@
-import { Outlet } from "react-router-dom"
-import Header from "../components/Header"
-import Modal from "../components/Modal"
-import Notification from "../components/Notification"
 import { useEffect } from "react"
+import Modal from "../components/Modal"
+import Header from "../components/Header"
+import { Outlet } from "react-router-dom"
 import { useAppStore } from "../stores/useAppStore"
+import Notification from "../components/Notification"
 
 
 export default function Layout() {
