@@ -1,19 +1,19 @@
 import { StateCreator } from "zustand"
-import { getCategories, getRecipeById, getRecipes } from "../services/RecipeService"
-import type { Categories, Drink, Drinks, Recipe } from "../types"
 import { SearchFilter } from '../types/index';
 import { FavoritesSliceType } from "./favoritesSlice";
+import type { Categories, Drink, Drinks, Recipe } from "../types"
+import { getCategories, getRecipeById, getRecipes } from "../services/RecipeService"
 
-/**Aqqui se recibe la petición de la API */
+/**Aqui se recibe la petición de la API */
 export type RecipesSliceType = {
-    categories: Categories
     drinks: Drinks
-    selectedRecipe: Recipe
     modal: boolean
-    fetchCategories: () => Promise<void>
-    searchRecipes: (SearchFilters: SearchFilter) => Promise<void>
-    selectRecipe: (id: Drink['idDrink']) => Promise<void>
+    selectedRecipe: Recipe
+    categories: Categories
     closeModal: () => void
+    fetchCategories: () => Promise<void>
+    selectRecipe: (id: Drink['idDrink']) => Promise<void>
+    searchRecipes: (SearchFilters: SearchFilter) => Promise<void>
 }
 
 // [].- No se esperan parámetros

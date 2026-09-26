@@ -1,9 +1,11 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
+import { createAISlice, AISlice } from './aiSlice';
 import { createRecipesSlice, RecipesSliceType } from "./recipeSlice";
 import { createFavoritesSlice, FavoritesSliceType } from "./favoritesSlice";
 import { createNotificationSlice, NotificationSliceType } from "./notificationSlice";
-import { createAISlice, AISlice } from './aiSlice';
+
+//ESTE ES EL STORE PRINCIPAL, QUE CONTIENE TODOS LOS SLICES
 
 // ...a; pasa todos los argumentos (set,get,api)
 //devtools.- te permite ver el contenido (categories)
