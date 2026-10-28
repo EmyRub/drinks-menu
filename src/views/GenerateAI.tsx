@@ -9,7 +9,7 @@ export default function GenerateAI() {
     const showNotification = useAppStore(state => state.showNotification)
 
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         const form = new FormData(e.currentTarget)

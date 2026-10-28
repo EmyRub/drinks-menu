@@ -3,6 +3,7 @@ import { openRouter } from "../lib/ai"
 
 export default {
 
+    /**Configuración para generar recetas */
     async generateRecipe(prompt: string) {
         
         const result = streamText({

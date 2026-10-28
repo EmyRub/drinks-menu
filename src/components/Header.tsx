@@ -1,6 +1,6 @@
 import { useAppStore } from "../stores/useAppStore";
 import { NavLink, useLocation } from "react-router-dom";
-import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, SubmitEvent, useEffect, useMemo, useState } from "react";
 
 export default function Header() {
 
@@ -30,7 +30,7 @@ export default function Header() {
         })
     }
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         //Validar
